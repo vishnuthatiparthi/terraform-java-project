@@ -1,0 +1,31 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+
+# Node.js (frontend & backend)
+node_modules/
+npm-debug.log
+build/
+.env
+
+# Docker
+*.log
+
+# System/IDE files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# OS-generated files
+*.bak
+*.tmp
+
+# Other
+.rds/
+mysql/
