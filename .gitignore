@@ -27,5 +27,4 @@ Thumbs.db
 *.tmp
 
 # Other
-.rds/
 mysql/
