@@ -1,20 +1,48 @@
+########################
 # Terraform
+########################
+# Local terraform directories
 .terraform/
+.terraform.lock.hcl
+
+# Terraform state files (DO NOT COMMIT)
 *.tfstate
 *.tfstate.*
-crash.log
-*.tfvars
 
-# Node.js (frontend & backend)
+# Crash logs
+crash.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+########################
+# Node.js (frontend/backend)
+########################
 node_modules/
 npm-debug.log
+yarn-error.log
 build/
-.env
+dist/
 
+# Environment variables
+.env
+.env.*
+
+########################
+# Python
+########################
+__pycache__/
+*.pyc
+
+########################
 # Docker
+########################
 *.log
 
-# System/IDE files
+########################
+# System / IDE files
+########################
 .DS_Store
 Thumbs.db
 *.swp
@@ -22,9 +50,24 @@ Thumbs.db
 .idea/
 .vscode/
 
-# OS-generated files
+########################
+# OS generated files
+########################
 *.bak
 *.tmp
 
-# Other
-mysql/
+########################
+# Java / Maven / Gradle
+########################
+target/
+*.jar
+*.war
+*.class
+.gradle/
+build/
+
+########################
+# Others
+########################
+# Remove only if you REALLY use MySQL dump directory
+#mysql/
