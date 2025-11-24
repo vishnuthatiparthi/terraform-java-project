@@ -33,17 +33,17 @@ fmt:
 .PHONY: plan
 plan:
 	@echo "Planning Terraform Changes For $(ENVNAME)"
-	cd $(TFDIR) && terraform plan -var-file=./environments/$(ENVNAME)/params.tfvars
+	cd $(TFDIR) && terraform plan -var-file=./environments/$(ENVNAME)/terraform.tfvars
 
 .PHONY: apply
 apply:
 	@echo "Applying Terraform Changes To $(ENVNAME)"
-	cd $(TFDIR) && terraform apply -var-file=./environments/$(ENVNAME)/params.tfvars
+	cd $(TFDIR) && terraform apply -var-file=./environments/$(ENVNAME)/terraform.tfvars
 
 .PHONY: destroy
 destroy:
 	echo "Destroying Terraform Changes On Environment $(ENVNAME)"
-	cd $(TFDIR) && terraform destroy -var-file=./environments/$(ENVNAME)/params.tfvars
+	cd $(TFDIR) && terraform destroy -var-file=./environments/$(ENVNAME)/terraform.tfvars
 
 .PHONY: output
 output:
